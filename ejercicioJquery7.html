@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    7. Crear un formulario que pida las notas de las asignaturas 
+    del curso. Al situar el foco en cada uno de los campos de nota 
+    se debe modificar el color del texto a rojo. Cuando no tenga el 
+    foco el color del texto debe ser verde.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!--FORMULARIO-->
+
+<body>
+    <form>
+        <h1>Notas</h1>
+        <input class="texto" type="text" value="interfaces" /><br>
+        <input class="texto1" type="text" value="ingles" /><br>
+        <input class="texto2" type="text" value="cliente" /><br>
+        <input class="texto3" type="text" value="servidor" /><br>
+        <input class="texto4" type="text" value="empresa" /><br>
+        <input class="texto5" type="text" value="despliegue" /><br>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        //FUNCIONES => UNA POR ASIGNATURA
+        // Establece el color de fondo en verde
+        $(".texto").css("background-color", "green");
+        $(".texto1").css("background-color", "green");
+        $(".texto2").css("background-color", "green");
+        $(".texto3").css("background-color", "green");
+        $(".texto4").css("background-color", "green");
+        $(".texto5").css("background-color", "green");
+
+        // Con foco
+        $("input.texto").focus(function() {
+            $(".texto").css("background-color", "red");
+            $(".texto").css("color", "white");
+        });
+
+        $("input.texto1").focus(function() {
+            $(".texto1").css("background-color", "red");
+            $(".texto1").css("color", "white");
+        });
+
+        $("input.texto2").focus(function() {
+            $(".texto2").css("background-color", "red");
+            $(".texto2").css("color", "white");
+        });
+
+        $("input.texto3").focus(function() {
+            $(".texto3").css("background-color", "red");
+            $(".texto3").css("color", "white");
+        });
+
+        $("input.texto4").focus(function() {
+            $(".texto4").css("background-color", "red");
+            $(".texto4").css("color", "white");
+        });
+
+        $("input.texto5").focus(function() {
+            $(".texto5").css("background-color", "red");
+            $(".texto5").css("color", "white");
+        });
+    </script>
+</body>
+
+</html>

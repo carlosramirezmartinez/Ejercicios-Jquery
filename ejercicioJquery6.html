@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    6. Crear una página web que tenga una tabla con productos de una 
+    juguetería. Tendrá tres botones: Poner borde, Mostrar el valor del 
+    borde, Eliminar borde. Realizar con JQuery las acciones pertinentes.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <button onclick="ponerBorde()">Poner borde</button>
+    <button onclick="valorBorde()">Mostrar el valor del borde</button>
+    <button onclick="eliminarBorde()">Eliminar borde</button>
+    </br>
+    </br>
+    <table border="5">
+        <thead>
+            <tr>
+                <th>Estanteria 1</th>
+                <th>Estanteria 2</th>
+                <th>Estanteria 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Castillo</td>
+                <td>Coche</td>
+                <td>Pikachu</td>
+            </tr>
+            <tr>
+                <td>Dragon</td>
+                <td>Vaso</td>
+                <td>Furby</td>
+            </tr>
+            <tr>
+                <td>Medalla</td>
+                <td>Poke Ball</td>
+                <td>Balon</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // FUNCIONES
+        function ponerBorde() {
+            $("table").attr("border", "5");
+        };
+
+        function valorBorde() {
+            alert("5");
+        };
+
+        function eliminarBorde() {
+            $("table").removeAttr("border");
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    9. Realizar una miniweb con secciones, artículos y párrafos. 
+    Dispondremos en el footer de 6 botones que nos permitirán aumentar 
+    o disminuir la fuente de cada una de las partes de nuestra web.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!--BOTONES-->
+    <button onclick="XS();">XS</button>
+    <button onclick="S();">S</button>
+    <button onclick="M();">M</button>
+    <button onclick="L();">L</button>
+    <button onclick="XL();">XL</button>
+    <button onclick="XXL();">XXL</button>
+    <h1>Esto es un titulo</h1>
+    <article>Buenas tardes</article>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae totam dignissimos numquam optio! Saepe pariatur repellat quasi perferendis cum quaerat est voluptates, facere ab voluptatum! Totam voluptates impedit molestias incidunt.</p>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        // FUNCIONES
+        function XS() {
+            $("body").css("font-size", "0.1em");
+        };
+
+        function S() {
+            $("body").css("font-size", "0.5em");
+        };
+
+        function M() {
+            $("body").css("font-size", "1em");
+        };
+
+        function L() {
+            $("body").css("font-size", "3em");
+        };
+
+        function XL() {
+            $("body").css("font-size", "8em");
+        };
+
+        function XXL() {
+            $("body").css("font-size", "15em");
+        };
+    </script>
+</body>
+
+</html>

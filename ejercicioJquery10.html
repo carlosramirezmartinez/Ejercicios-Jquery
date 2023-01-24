@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    10. Trabajaremos un “textarea” controlando el evento keyup.
+    Si el usuario va pulsando teclas para escribir en ella, modificaremos 
+    una caja de texto al lado del “textarea” para indicarle en todo 
+    momento el número de caracteres que lleva escritos en dicha “textarea”.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <textarea id="recuadro" cols="60" rows="20"></textarea>
+    <br> Caracteres: <span id="numerocaracteres">Escribe algo...</span>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        function contador(idtextarea, idcontador) {
+            function update_contador(idtextarea, idcontador) {
+                var contador = $(idcontador);
+                var teclear = $(idtextarea);
+                contador.html(teclear.val().length);
+            }
+            $(idtextarea).keyup(function() {
+                update_contador(idtextarea, idcontador);
+            });
+        }
+        $(document).ready(function() {
+            contador("#recuadro", "#numerocaracteres");
+        });
+    </script>
+</body>
+
+</html>

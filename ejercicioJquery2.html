@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    2. Crear una página web con un botón. Al situar el cursor en el 
+    mismo se modificará la opacidad a 0,3 en 0,4 segundos.
+    Al salir del botón se dejará como estaba en 0,4 segundos. 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <button><h1>BEST BOTON EVER!!!!</h1></button>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        // sintaxis: $(selector).fadeTo(speed,opacity,easing,callback)
+        $("button").hover(function() {
+            $(this).fadeTo(0.4, 0.3);
+        }, function() {
+            $(this).fadeTo(0.4, 1);
+        });
+    </script>
+</body>
+
+</html>

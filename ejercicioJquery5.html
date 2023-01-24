@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    5.	Crear una página web con 3 chexbox: 
+    Mayor de edad, Socio y Tarjeta Regalo.
+
+    Además tendrá una tabla con las siguientes filas:
+        a.	Debe ir acompañado de un adulto
+        b.	No puede traer invitados
+        c.	Abonará 5% de tasas
+
+    En caso de pulsar el primer checkbox se esconderá la primera fila. 
+    En el caso de pulsar el segundo se esconderá la segunda fila y si 
+    se pulsa el tercero se esconderá la tercera fila. En caso contrario 
+    se mostrarán las mismas filas.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!--ETIQUETAS-->
+    <label><input class="mayorEdad" type="checkbox" name="mayorEdad" onchange="mayorEdad()" />Mayor de edad</label>
+    <label><input class="socio" type="checkbox" name="socio" onchange="socio()" />Socio</label>
+    <label><input class="tarjetaRegalo" type="checkbox" name="tarjetaRegalo" onchange="tarjetaRegalo()" />Tarjeta Regalo</label>
+    </br>
+    </br>
+    <!--TABLA-->
+    <div class="mayorEdadCheck">Debe ir acompañado de un adulto</div>
+    <div class="socioCheck">No puede traer invitados</div>
+    <div class="tarjetaRegaloCheck">Abonará 5% de tasas</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        // FUNCIONES
+        function mayorEdad() {
+            if ($('.mayorEdad').is(":checked"))
+                $(".mayorEdadCheck").hide();
+            else
+                $(".mayorEdadCheck").show();
+        }
+
+        function socio() {
+            if ($('.socio').is(":checked"))
+                $(".socioCheck").hide();
+            else
+                $(".socioCheck").show();
+        }
+
+        function tarjetaRegalo() {
+            if ($('.tarjetaRegalo').is(":checked"))
+                $(".tarjetaRegaloCheck").hide();
+            else
+                $(".tarjetaRegaloCheck").show();
+        }
+    </script>
+</body>
+
+</html>
